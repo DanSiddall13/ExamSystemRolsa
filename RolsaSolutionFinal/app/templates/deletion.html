@@ -1,0 +1,36 @@
+﻿
+    <!DOCTYPE html>
+
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" href="static/StyleSheet.css" />
+        <meta charset="utf-8" />
+        <title>Login/Register</title>
+    </head>
+
+    <body>
+        <div class="loginBackground">
+            <div class="backArrow">
+                <a href="account"> <img src="static/Backarrow.png" style="width:200px; height:80px; padding-top:10px;" /></a>
+            </div>
+            <a href="supportPage">
+                <div class="loginSupport">
+                    <h3>Support</h3>
+                </div>
+            </a>
+            <div class="loginFormbg">
+                <h2>Clicking this button will delete your account and all information we hold about you</h2>
+                <p> There is no confirmation after the button</p>
+                <form action="{{url_for('deletion')}}" method="POST" ,"GET">
+
+                    <input type="submit" value="Delete Account" name="submit" />
+                    <br /><br />
+                    <a href="home"> Back to home Page</a>
+                </form>
+            </div>
+            <br><br />
+            
+        </div>
+
+    </body>
+</html>

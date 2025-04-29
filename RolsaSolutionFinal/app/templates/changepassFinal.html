@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="static/StyleSheet.css" />
+    <meta charset="utf-8" />
+    <title>Login/Register</title>
+</head>
+
+<body>
+    <div class="loginBackground">
+        <div class="backArrow">
+            <a href="Home"> <img src="static/Backarrow.png" style="width:200px; height:80px; padding-top:10px;" /></a>
+        </div>
+        <div class="Loginerror">
+            {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+
+            {% for category,message in messages%}
+            {% if category == "error" %}
+            <div class="Login-error">
+                <p>Error, <strong>{{message}}</strong> </p>
+                <p>nsure the fields are between 2-50 characters long and avoid characters such as speech marks and apostrophies</p>
+            </div>
+            {% elif category == "success" %}
+            <div class="login-success">
+                {{message}}
+            </div>
+
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <a href="supportPage">
+            <div class="loginSupport">
+                <h3>Support</h3>
+            </div>
+        </a>
+        <div class="loginFormbg">
+            <h1>Login to existing account</h1>
+            <form action="{{url_for('loginlogic')}}" method="POST" ,"GET">
+
+                <label>Email</label><br />
+                <input type="text" name="email" id="email" />
+                <br /><br />
+                <label>Password</label><br />
+                <input type="password" name="password" id="password" />
+                <br /><br>
+                <div class="submit">
+                    <input type="submit" value="Login" name="register" />
+                </div>
+                <br><br />
+
+                <a href="register">Register New Account</a>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

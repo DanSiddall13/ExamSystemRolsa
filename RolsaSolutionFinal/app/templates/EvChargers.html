@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link rel="stylesheet" href="StyleSheet.css" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Reducing energy usage</title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="products">
+        <div class="itemimg"><img src="static/product_1.jpg" /></div>
+        <h3>SyncEV- Wall Charger 2</h3>
+        <p>Packed with smart technology with full integration to the monta app</p>
+        <ul>
+            <li>
+                Suitable for redisdential and commercial use
+            </li>
+            <li>Fully compliant with the latest electric vehicles</li>
+        </ul>
+        <br />
+        <h2>£325.00</h2>
+    </div>
+    <div class="product2">
+        <img src="static/product_2.jpg" height="300" ; />
+        <h3>SyncEV- Wall Charger 2</h3>
+        <p>Packed with smart technology with full integration to the monta app</p>
+        <ul>
+            <li>
+                Suitable for redisdential and commercial use
+            </li>
+            <li>Fully compliant with the latest electric vehicles</li>
+            <li>wifi and bluetooth enabled</li>
+            <li>50 amps</li>
+        </ul>
+        <br />
+        <h2>£1174.00</h2>
+    </div>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+
+</body>
+</html>

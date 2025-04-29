@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="Loginerror">
+        {% with messages = get_flashed_messages()%}
+        {% if messages%}
+        <p>These fields are invalid</p>
+        {% for message in messages%}
+        {{message}}
+        {% endfor %}
+        <p>ensure the fields are between 2-50 characters long and avoid characters such as speech marks and apostrophies</p>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

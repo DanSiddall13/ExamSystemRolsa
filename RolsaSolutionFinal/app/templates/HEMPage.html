@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link rel="stylesheet" href="StyleSheet.css" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Reducing energy usage</title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="info">
+        <h1>Home energy management System</h1>
+        <br />
+        <h1>What is it?</h1>
+        <br />
+        <p>
+            Home Energy Management Systems (HEMS) are transforming the way households consume energy, offering smarter, more efficient solutions for reducing electricity waste.
+            These systems optimize energy usage by monitoring appliances, regulating power consumption, and automating settings to lower electricity costs. With real-time data,
+            homeowners can track their energy habits and make informed decisions to cut unnecessary usage.
+        </p>
+        <h2>Reducing emission</h2>
+        <p>Beyond cost savings, HEMS contribute to reducing carbon emissions. By integrating with renewable energy sources like solar panels or smart grids,
+        they help maximize clean energy usage while minimizing reliance on fossil fuels.
+        Automated energy scheduling ensures appliances run when electricity demand is low, further reducing environmental impact.</p>
+    </div>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+</body>
+</html>

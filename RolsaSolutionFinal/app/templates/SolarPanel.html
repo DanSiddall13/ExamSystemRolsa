@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link rel="stylesheet" href="StyleSheet.css" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Reducing energy usage</title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png"  /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="products">
+        <div class="itemimg"><img src="static/product_3.jpg" width="600" alt="A picture of a standalone solar panel"/></div>
+        <h3>Bluetti PV350 Solar Panel 350W</h3>
+        <p>Foldable and compact make this product very versatile</p>
+        <ul>
+            <li>
+                Suitable for redisdential and commercial use
+            </li>
+            <li>23.4% convertion rate</li>
+            <li>95% transparency</li>
+            <li>Wide compatibility</li>
+            <li>Monocrystalline solar panel</li>
+            <li>Works with most solar generators</li>
+        </ul>
+        <br />
+        <h2>£649.00 inc VAT</h2>
+    </div>
+    <div class="product2">
+        <img src="static/product_4.webp" height="500"; alt="A picture of a solar panel on a roof" />
+        <h3>440W solar power kit</h3>
+        <p>This kit is a grid tied solar panel system is cheap, and requires no certifications or inspections</p>
+        <ul>
+            <li>
+                Suitable for redisdential and commercial use
+            </li>
+            <li>Expandable at any time</li>
+            <li>Black Monocrystalline panels</li>
+            <li>440W</li>
+        </ul>
+        <br />
+        <h2>£730.33</h2>
+    </div>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+
+</body>
+</html>

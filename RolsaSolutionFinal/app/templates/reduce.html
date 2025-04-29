@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link rel="stylesheet" href="StyleSheet.css" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Reducing energy usage</title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="info">
+        <h1>How to reduce your carbon footprint in a few very easy ways</h1>
+        <br />
+        <h3>The small things</h3>
+        <br />
+        <p>
+            Reducing your carbon footprint doesn't have to be complicated—small,
+            everyday actions can add up to significant environmental impact. One simple
+            step is reducing energy consumption at home. Switching off lights when you
+            leave a room, unplugging electronics when they're not in use, a
+            nd opting for energy-efficient appliances can cut down unnecessary emissions. Even adjusting your thermostat slightly—lowering it in winter and
+            raising it in summer—can make a big difference in your home's energy use.
+        </p><br />
+        <h3>Transportation</h3>
+        <br />
+        <p>
+            Another effective way to lower your carbon footprint is rethinking transportation.
+            Walking, biking, or using public transport instead of driving can drastically cut carbon emissions.
+            If you need to drive, carpooling or switching to a hybrid or electric vehicle helps reduce fuel consumption.
+            Additionally, avoiding unnecessary air travel or choosing trains over planes for shorter trips can significantly lessen your carbon impact.
+        </p>
+        <br />
+        <h3>Food Sources</h3>
+        <br />
+        <p>
+            Food choices also play a crucial role in carbon reduction.
+            Eating locally sourced and plant-based foods helps lower the environmental costs of transportation and production.
+            Meat production, especially beef, generates a high carbon footprint due to methane emissions and resource consumption.
+            Even small shifts, like participating in "Meatless Mondays" or reducing food waste by planning meals efficiently, can contribute to a greener lifestyle.
+        </p>
+    </div>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+</body>
+</html>

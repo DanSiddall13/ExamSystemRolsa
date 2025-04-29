@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link rel="stylesheet" href="StyleSheet.css" /> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title>Reducing energy usage</title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="info">
+        <h1>Green energy</h1>
+        <br />
+        <h1>The Benefits</h1>
+        <br />
+        <p>
+            Green energy is revolutionizing the way we power our homes, businesses, and transportation, offering a cleaner, more sustainable alternative to fossil fuels.
+            Unlike coal and gas, renewable energy sources—such as solar, wind, and hydropower—produce little to no greenhouse gas emissions.
+            By reducing dependence on fossil fuels, green energy helps combat climate change, improve air quality, and preserve natural resources for future generations.
+        </p>
+        <h2>Reducing costs</h2>
+        <p>
+            Beyond environmental benefits, green energy also leads to long-term cost savings.
+            While initial investments in solar panels or wind turbines may seem high, renewable energy systems drastically cut electricity costs over time.
+            Many governments offer tax credits and incentives to make renewable adoption even more affordable, allowing homeowners and businesses to generate their own clean power while lowering utility bills.
+        </p>
+    </div>
+    <img src="static/turbine.jpg" height="400" />
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+</body>
+</html>

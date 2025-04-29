@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="login">Login/Register</a>
+                {% else %}
+                <a href="account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+    <div class="bookingBackground">
+
+        <div class="bookingTitle">
+            <h1>
+                Welcome, {{data[1]}}
+
+                <br />
+                <br />
+            </h1>
+
+            <div class="bookingSubtitle">
+                <h3>This is your profile page where you can manage your data</h3>
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>{{data[1]}}</td>
+                        <td>{{data[2]}}</td>
+                        <td>{{data[3]}}</td>
+                        <td>{{data[4]}}</td>
+                    </tr>
+
+                </table>
+                <br />
+
+                <h3>Your Bookings</h3>
+                <div class="bookings">
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Booking Type</th>
+                            <th>Date</th>
+                            <th>Booking Removal</th>
+                        </tr>
+                        {% if bookingData %}
+                        {% for i in range(bookingData|length)%}
+                        <tr>
+                            <td>{{bookingData[i][1]}}</td>
+                            <td>{{bookingData[i][2]}}</td>
+                            <td>{{bookingData[i][3]}}</td>
+                            
+                            <td>
+                                <form action="/account" method="post">
+                                    <input type="hidden" value="{{i}}" name="booking" />
+                                <input type="submit" value="Cancel this Booking" />
+                                </form>
+                            </td>                            
+
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <caption>No Current Bookings</caption>
+                        {% endif %}
+                    </table>
+                    <br /><br />
+                </div>
+                <div class="options">
+                    <a href="addaddress">Add / Update Address</a>
+                    <a href="logOut">Log Out</a>
+                    <a href="deletion"> Delete Account</a>
+                    <a href="changepass">Change Password</a>
+                    <br /><br />
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+</body>
+</html>

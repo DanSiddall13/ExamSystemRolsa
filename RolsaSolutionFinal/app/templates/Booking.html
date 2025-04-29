@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <title></title>
+    <link rel="stylesheet" href="static/StyleSheet1.css" />
+
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><a href="Home" style="width:150px; height:30px">Rolsa Tech</a></div>
+
+        <div class="menu">
+            <div class="dropdown">
+                <a href="SolarPanel" class="dropbtn">SolarPanel <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="SolarInstall">Solar Installations</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="EVpage" class="dropbtn">EV's <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="EVChargers">EVChargers</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="HEMPage" class="dropbtn">HEM's </a>
+
+            </div>
+            <div class="dropdown">
+                <a href="GreenPage" class="dropbtn">Green Energy <img src="static/Downarrow.png" alt="A dropdown arrow" /></a>
+                <div class="dropdown-content">
+                    <a href="reduce">reduce emissions</a>
+                    <a href="CarbonCalc">Carbon Footprint Calculator</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="Booking" class="dropbtn">Bookings</a>
+
+            </div>
+
+            <div class="logo2">
+                {% if data.loggedin == False %}
+                <a href="/login">Login/Register</a>
+                {% else %}
+                <a href="/account"><img src="static/loggedin.png" /> </a>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+    <form action="/bookingproc" method="post">
+        <div class="booking-bg">
+            <div class="homeTitle">
+                <h1>Welcome to the booking page</h1>
+                <p>Check your current bookings on the account page</p>
+            </div>
+        </div>
+        <div class="booking-input-bg">
+
+            <div class="booking-input">
+                <label>What are you booking?</label><br />
+                <select name="type">
+                    <option value="installation">Installation</option>
+                    <option value="consultation">Consultation</option>
+                </select>
+            </div>
+            <div class="booking-input">
+                <label>What product would you like to get a booking about?</label><br />
+                <select name="prod">
+                    <option value="solar panels">Solar Panel/s</option>
+                    <option value="ev charger">Ev Charger</option>
+                    <option value="home energy management system">HEM</option>
+                </select>
+            </div>
+            <div class="booking-input">
+                <label>What date would you like the booking?</label><br />
+                <input type="date" name="date" /><br />
+                <p>Keep in mind all bookings happen from a time between 10am - 6pm</p>
+            </div>
+
+        </div>
+        <br />
+        <div class="booking-error">
+            {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+
+            {% for category,message in messages%}
+            {% if category == "error" %}
+            <div class="Login-error">
+                <p><strong>{{message}}</strong> </p>
+            </div>
+            {% elif category == "success" %}
+            <div class="login-success">
+                {{message}}
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="booking-text">
+            Please make sure your Address is up to date
+        </div>
+        <br />
+        <div class="booking-but">
+            <input type="submit" value="Confirm your Booking" />
+        </div>
+    </form>
+    <div class="footer">
+        <p>Contact us: <a href="mailto:support@rolsa-tech.com">support@rolsa-tech.com</a></p>
+        <p>Phone: +44 1234 567 890</p>
+        <p><a href="supportPage" target="_blank">Visit our support site</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="static/StyleSheet.css" />
+    <meta charset="utf-8" />
+    <title>Login/Register</title>
+</head>
+
+<body>
+    <div class="loginBackground">
+        <div class="backArrow">
+            <a href="Home"> <img src="static/Backarrow.png" style="width:200px; height:80px; padding-top:10px;" /></a>
+        </div>
+        <div class="Loginerror">
+            {% with messages = get_flashed_messages()%}
+            {% if messages%}
+            <p>These fields are invalid</p>
+            {% for message in messages%}
+            {{message}}
+            {% endfor %}
+            <p>ensure the fields are between 2-50 characters long and avoid characters such as speech marks and apostrophies</p>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <a href="supportPage">
+            <div class="loginSupport">
+                <h3>Support</h3>
+            </div>
+        </a>
+        <div class="loginFormbg">
+            <h1>Login to existing account</h1>
+            <form action="{{url_for('addaddress')}}" method="POST" ,"GET">
+
+                <label>Enter your Address:</label><br />
+                <input type="text" name="addr" id="addr" />
+                <br /><br />
+                    <input type="submit" value="Login" name="submit" />
+                </div>
+                <br><br />
+
+                <a href="register">Register New Account</a>
+           </form>
+        </div>
+    </div>
+</body>
+</html>

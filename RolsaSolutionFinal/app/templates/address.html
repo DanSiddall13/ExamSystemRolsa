@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="static/StyleSheet.css" />
+    <meta charset="utf-8" />
+    <title>Address</title>
+</head>
+
+<body>
+    <div class="loginBackground">
+        <div class="backArrow">
+            <a href="account"> <img src="static/Backarrow.png" style="width:200px; height:80px; padding-top:10px;" /></a>
+        </div>
+        <a href="supportPage">
+            <div class="loginSupport">
+                <h3>Support</h3>
+            </div>
+        </a>
+        <div class="loginFormbg">
+            <h1>Update/add your home address</h1>
+            <form action="{{url_for('addaddress')}}" method="POST" ,"GET">
+
+                <label>Enter your Address:</label><br />
+                <input type="text" name="addr" id="addr" />
+                <br /><br />
+                <input type="submit" value="Add address" name="submit" />
+            </form>
+        </div>
+        
+        <br><br />
+
+
+
+    </div>
+
+</body>
+</html>
