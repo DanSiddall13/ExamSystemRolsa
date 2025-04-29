@@ -7,6 +7,6 @@ Then you can run the code. Once the code is running this is what the console sho
 
 If it does not look like this and it returns an error then make sure you have downloaded python and installed flask or any other library which it may specify.
 
-If the console does look like that then you can open a browser and go to search "http://localhost:5000/" in the search/address bar
+If the console does look like that then you can open a browser and go to "http://localhost:5000/" in the search/address bar
 This should show the website and allow you to access the code and run it as normal
 
