@@ -7,7 +7,7 @@ to schedule a booking/consultation for these products. There is also a carbon fo
 
 # How to run the system locally
 To run it and view my website use Microsoft Visual Studio which you can download a free community version of from microsoft, Once this is done
-from visual studio you can install a python compiler and install flask via "pip install flask" in the console or in the packages section identified as a little yellow present on the
+from visual studio you can install a python compiler from inside visual studio and install flask via "pip install flask" in the console or in the packages section identified as a little yellow present on the
  top bar. Once all is installed open the project file "RolsaSolution.sln" 
 Then you can run the code by pressin Start at the top or "F5" while on app.py . Once the code is running this is what the console should look like.
 ![image](https://github.com/user-attachments/assets/d3084d52-aca8-4a23-ac46-499498a8acf2)
