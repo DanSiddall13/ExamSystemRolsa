@@ -8,8 +8,10 @@ This system allows users to find out information about green energy, solar panel
 to schedule a booking/consultation for these products. There is also a carbon footprint calculator and an account registration page. 
 
 # How to run the system locally
-First install the files from github by pressing "Code" and then download ZIP.
+First install the files from github by pressing "Code" and then download ZIP. This should be above where the files and readme are shown.
+
 ![image](https://github.com/user-attachments/assets/99100b93-0edd-45b0-8245-b5e157a2cc64)
+
 Once the file is installed unzip it and 
 
 To run it and view my website use Microsoft Visual Studio which you can download a free community version of from https://visualstudio.microsoft.com/ 
