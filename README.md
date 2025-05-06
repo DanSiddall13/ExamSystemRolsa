@@ -20,9 +20,10 @@ from visual studio you can install a python compiler from inside visual studio
 Then open "RolsaSolution.sln" which is found within RolsaSolutionFinal.
 It may seem like its opened nothing, but it has opened the solution behind the scenes and won't show it you unless you explictly open app.py.
 You can open app.py by pressing "ctrl + o" and then selecting app.py found in RolsaSolutionFinal/app/app.py
+
 ![image](https://github.com/user-attachments/assets/dd099d04-1307-4321-aed4-75ddb313d951)
 
-Next install flask by pressing the yellow present icon on the top bar ![image](https://github.com/user-attachments/assets/1cea472d-bb56-405c-8da6-bf0eda9af0d8) which should look like this.
+Next install flask by pressing the yellow present icon on the top bar which should look like this. ![image](https://github.com/user-attachments/assets/1cea472d-bb56-405c-8da6-bf0eda9af0d8) 
 Or if you cannot see it ensure the program isn't running and follow steps shown in the image below.
 
 ![image](https://github.com/user-attachments/assets/530501ba-da63-433a-bb19-2e8c4a2ed1fa)
