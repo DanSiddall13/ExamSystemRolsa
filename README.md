@@ -15,6 +15,9 @@ Once the file is installed unzip it and
 To run it and view my website use Microsoft Visual Studio which you can download a free community version of from https://visualstudio.microsoft.com/ 
 Ensure this is Visual studio and NOT visual studio code.
 
+![image](https://github.com/user-attachments/assets/e50f0f11-2fd6-4343-8258-117c13d53420)
+
+
 After this open the installer and follow the steps given
 from visual studio you can install a python compiler from inside visual studio
 Then open "RolsaSolution.sln" which is found within RolsaSolutionFinal.
