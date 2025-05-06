@@ -4,7 +4,6 @@ from datetime import date
 import time
 from os import error
 from time import sleep
-from types import NoneType
 from flask import Flask, render_template, request, flash, get_flashed_messages, session, redirect, url_for
 import re
 import sqlite3
@@ -211,7 +210,7 @@ def loginlogic():
         cursor.execute("SELECT CustomerID,CfirstName FROM tblCust WHERE CEmail = ? AND CPassHash = ?",(email,hashpass)) # look for the user in our database
         account = cursor.fetchone()
         conn.close()
-        if type(account) != NoneType: # if there is an account then log in else flash incorrect and redirect to login again.
+        if type(account) != type(None): # if there is an account then log in else flash incorrect and redirect to login again.
             session['loginData'] = {'loggedin':True}
             session['loginID'] = {'ID':account[0]}
             session['loginName'] = {'fname':account[1]}
@@ -275,7 +274,7 @@ def regnew():
         cursor.execute("SELECT CEmail FROM tblCust WHERE CEmail = (?)", (email,))
         account = cursor.fetchone()
         conn.close()
-        if type(account) != NoneType:
+        if type(account) != type(None):
             flag = False
             flash("Email is already used under an account","error")
             return render_template("register.html", data=data)
@@ -354,7 +353,7 @@ def changepass():
             conn.commit()
             datapass = cursor.fetchone()  
             conn.close()
-            if type(datapass) != NoneType:  #if the input password is correct then it will update the database on the correct user.
+            if type(datapass) != type(None):  #if the input password is correct then it will update the database on the correct user.
                 newPass = request.form.get('newpass')
                 msg = hashncheck(newPass)
                 if type(msg) == str:
