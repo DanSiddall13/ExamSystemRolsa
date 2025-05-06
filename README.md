@@ -3,7 +3,7 @@
 # ExamSystemRolsa
 
 This is my exam system made for the 2025 Operational Specialism task. 
-# The purpose of the systemS
+# The purpose of the system
 This system allows users to find out information about green energy, solar panels, EV chargers and HEM's as well as book appointments 
 to schedule a booking/consultation for these products. There is also a carbon footprint calculator and an account registration page. 
 
