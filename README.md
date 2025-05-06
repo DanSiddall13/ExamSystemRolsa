@@ -12,7 +12,7 @@ First install the files from github by pressing "Code" and then download ZIP. Th
 
 ![image](https://github.com/user-attachments/assets/99100b93-0edd-45b0-8245-b5e157a2cc64)
 
-Once the file is installed unzip it and 
+Once the file is installed unzip it and you are ready to use the files.
 
 To run it and view my website use Microsoft Visual Studio which you can download a free community version of from https://visualstudio.microsoft.com/ 
 Ensure this is Visual studio and NOT visual studio code.
