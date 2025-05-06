@@ -34,7 +34,7 @@ Once the present in clicked it should open a new tab on the right which will sho
 ![image](https://github.com/user-attachments/assets/e1d7f0db-64d3-4c29-a2c5-1ce94d99600c)
 
 Then in the search bar type "Flask"
-The first result should be "pip install flask" press that and it should install flask for you.
+The first result should be "run command: pip install flask" press that and it should install flask for you.
 
 Then you can run the code by pressin Start at the top or "F5" while on app.py . Once the code is running this is what the console should look like.
 
